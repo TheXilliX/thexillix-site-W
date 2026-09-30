@@ -7,6 +7,7 @@
     <title>TheXilliX — Кто он?</title>
     <link rel="preload" href="./assets/ghost.webp" as="image" type="image/webp" />
     <link rel="preload" href="./assets/eye.webp" as="image" type="image/webp" />
+    <link rel="preload" href="./assets/conifer-tree.svg" as="image" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -36,11 +37,28 @@
         <div class="grain" aria-hidden="true"></div>
       </section>
 
-      <section class="menu-placeholder" id="menu" aria-label="Будущее меню" hidden>
-        <div class="placeholder-inner">
-          <div class="placeholder-brand">TheXilliX</div>
-          <div class="placeholder-rule"></div>
-          <p>ЗДЕСЬ БУДЕТ МЕНЮ</p>
+      <section class="menu-placeholder" id="menu" aria-label="Навигация" hidden>
+        <div class="navigation-shell">
+          <header class="nav-head">
+            <div class="nav-brand-group">
+              <a class="nav-brand" href="#" aria-label="На главную">TheXilliX</a>
+              <a class="nav-tree" href="#conifer-cult" aria-label="Хвойный культ">
+                <img src="./assets/conifer-tree.svg" alt="" />
+              </a>
+            </div>
+            <time class="nav-time" id="menu-time" datetime="" aria-label="Текущее время">00:00:00</time>
+          </header>
+
+          <div class="nav-rule" aria-hidden="true"></div>
+
+          <nav class="nav-links" aria-label="Разделы сайта">
+            <a class="nav-link" href="#about">Обо мне</a>
+            <a class="nav-link" href="#now">Сейчас</a>
+            <a class="nav-link" href="#photos">Фотографии</a>
+            <a class="nav-link" href="#inspiration">Вдохновение</a>
+            <a class="nav-link" href="#projects">Мои проекты</a>
+            <a class="nav-link" href="#contacts">Контакты</a>
+          </nav>
         </div>
         <div class="grain" aria-hidden="true"></div>
       </section>

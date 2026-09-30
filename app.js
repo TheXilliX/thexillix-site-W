@@ -3,6 +3,23 @@
   const intro = document.getElementById('intro');
   const menu = document.getElementById('menu');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clock = document.getElementById('menu-time');
+
+  const updateClock = () => {
+    if (!clock) return;
+    const now = new Date();
+    const formatter = new Intl.DateTimeFormat('ru-RU', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false
+    });
+    clock.textContent = formatter.format(now);
+    clock.dateTime = now.toISOString();
+  };
+
+  updateClock();
+  window.setInterval(updateClock, 1000);
 
   const showMenu = (instant = false) => {
     if (!menu || !intro) return;
